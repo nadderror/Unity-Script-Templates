@@ -6,10 +6,10 @@
 
 using UnityEngine;
 
-public class #SCRIPTNAME#: MonoBehaviour
+public class #SCRIPTNAME#
 {
-   void Start()
-   {
-      #NOTRIM#
-   }
+    public #SCRIPTNAME#()
+    {
+	#NOTRIM#
+    }
 }
