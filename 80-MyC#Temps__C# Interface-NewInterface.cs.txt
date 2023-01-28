@@ -1,9 +1,3 @@
-/*
- * #SCRIPTNAME#.cs
- * Created by: #AUTHOR#
- * Created on: #CREATIONDATE#
-*/
-
 using UnityEngine;
 
 public interface #SCRIPTNAME#
