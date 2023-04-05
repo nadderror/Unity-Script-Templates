@@ -29,8 +29,8 @@ public class #SCRIPTNAME#  : MonoBehaviour
 
     private void Awake()
     {
-        if (_i != null) // if we have _i (#SCRIPTNAME#) before, then destroy me bos...
-            Destroy(this);
+        if (I != null && I != this) // if we have _i (#SCRIPTNAME#) before, then destroy me bos...
+            Destroy(this.gameObject);
         DontDestroyOnLoad(this.gameObject); //it's ok... i'am first <#SCRIPTNAME#>() now.
     }
 }
