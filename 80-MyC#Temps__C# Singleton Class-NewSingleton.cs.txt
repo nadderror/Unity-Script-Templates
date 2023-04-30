@@ -2,35 +2,31 @@ using UnityEngine;
 
 public class #SCRIPTNAME#  : MonoBehaviour
 {
-    static #SCRIPTNAME# _i; //  _i ←→ _instance 
+    static #SCRIPTNAME# _i;
 
     public static #SCRIPTNAME# I
     {
-        //  _i ←→ Instance 
         get
           {
-            //Singleton
-            if (_i == null) //Are we have #SCRIPTNAME# before? Checking...
+            if (_i == null)
             {
                 _i = FindObjectOfType<#SCRIPTNAME#>();
                  if (_i == null)
                 {
-                    //Ok... we dont have any <#SCRIPTNAME#>(); then create that
                     GameObject my#SCRIPTNAME# = new GameObject("#SCRIPTNAME#");
                      my#SCRIPTNAME#.AddComponent<#SCRIPTNAME#>();
                     _i = my#SCRIPTNAME#.GetComponent<#SCRIPTNAME#>();
                 }
             }
 
-            //return _i anyway
             return _i;
         }
     }
 
     private void Awake()
     {
-        if (I != null && I != this) // if we have _i (#SCRIPTNAME#) before, then destroy me bos...
+        if (I != null && I != this)
             Destroy(this.gameObject);
-        DontDestroyOnLoad(this.gameObject); //it's ok... i'am first <#SCRIPTNAME#>() now.
+        DontDestroyOnLoad(this.gameObject);
     }
 }
